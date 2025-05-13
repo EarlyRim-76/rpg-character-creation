@@ -1,0 +1,28 @@
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f3e6ac;
+
+    .pxl-title{
+        font-family: 'Pixelify sans', sans-serif;
+        color: #ad9e59;
+        font-weight: 600;
+    }
+
+    .btn-actions{
+        display: flex;
+        gap:5px;
+
+        .login{
+            color: #ad9e59;
+            font-family: 'Pixelify sans', sans-serif;
+        }
+        .create-acc{
+            background-color: #ad9e59;
+            color: #fff;
+            font-family: 'Pixelify sans', sans-serif;
+        }
+
+    }
+}

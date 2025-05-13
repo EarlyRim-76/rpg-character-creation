@@ -1,0 +1,21 @@
+<div class="card-container">
+    @for (animal of animalsCateg$ | async; track $index) {
+        <mat-card class="animal-card" appearance="outlined">
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title class="pixel-title">{{animal.type | ModifyAnimalTypes}}</mat-card-title>
+                <mat-card-subtitle>Large</mat-card-subtitle>
+                <img mat-card-lg-image [src]="animal.image">
+            </mat-card-title-group>
+        </mat-card-header>
+            <br>
+            <mat-card-content class="pixel-desc" [matTooltip]="animal.description">
+                {{animal.description |  modifyString}}...
+            </mat-card-content>
+            <br>
+            <mat-card-content>
+                <button mat-raised-button class="show-animals" (click)="showAnimals(animal.animalList)">Show Animals</button>
+            </mat-card-content>
+        </mat-card>
+    }
+</div>

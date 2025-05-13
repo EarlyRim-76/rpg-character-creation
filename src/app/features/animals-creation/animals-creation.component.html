@@ -1,0 +1,20 @@
+@for (animals of animals; track $index) {
+
+    <div>
+        <div>
+            {{animals.name}}    
+        </div>
+        <div>
+            {{animals.gender}}
+        </div>
+        <div>
+            {{animals.animalSound}}
+        </div>
+        <div>
+            {{animals.movement}}
+        </div>
+        <button (click)="animals.animalFood = 'Chicken'">Test</button>
+        
+    </div>
+
+}

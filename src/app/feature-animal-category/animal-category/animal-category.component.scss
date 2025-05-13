@@ -1,0 +1,37 @@
+
+::ng-deep app-animal-category{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-container{
+    width: 52%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 2fr));
+    gap: 1rem;
+    font-family: "Pixelify Sans", sans-serif;
+
+    .animal-card{
+        width: 20rem;
+
+        .pixel-title{
+            font-family: inherit;
+            font-size: 20px;
+        }
+
+        .pixel-desc{
+            font-family: inherit;
+            font-size: 20px;
+             color: #91844a;
+        }
+        
+        .show-animals{
+            font-family: inherit;
+            color: #ad9e59;
+        }
+
+    }
+}
