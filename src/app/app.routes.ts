@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: AnimalCategoryComponent
 },
 {
-    path: 'animal-list',
+    path: 'animal-list/:id',
     component: AnimalCategoryListComponent
 },
 {

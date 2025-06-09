@@ -6,9 +6,9 @@ export class ModifyAnimalTypes implements PipeTransform{
         if(value === 1){
             return 'Mammals'
         } else if(value === 2){
-            return 'Amphibians'
-        } else if(value === 3){
             return 'Birds'
+        } else if(value === 3){
+            return 'Amphibians'
         } else if(value === 4){
             return 'Fish'
         } else if(value === 5){

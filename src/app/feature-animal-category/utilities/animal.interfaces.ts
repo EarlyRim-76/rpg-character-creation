@@ -4,7 +4,6 @@ export interface IAnimal{
     image: string,
     description: string,
     type: AnimalClass
-    animalList: IAnimalData[]
 }
 
 export interface IAnimalData{

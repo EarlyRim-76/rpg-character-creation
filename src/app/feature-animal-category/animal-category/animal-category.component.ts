@@ -5,8 +5,6 @@ import {MatCardModule} from '@angular/material/card';
 import { ModifyString } from '../pipes/modify-string.pipe';
 import { ModifyAnimalTypes } from '../pipes/modify-animal-types.pipe';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import { IAnimalData } from '../utilities/animal.interfaces';
-import { HeaderComponent } from "../../shared/header/header.component";
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -41,11 +39,9 @@ export class AnimalCategoryComponent implements OnInit{
     }
   }
 
-  showAnimals(animals: IAnimalData[]){
-    console.log(animals);
+  showAnimals(animalType:number){
     localStorage.setItem('existing','true');
-    this._animalService.animalsData.next(animals);
-    this._router.navigate(['animal-list']);
+    this._router.navigate(['animal-list', animalType]);
   }
 
 }

@@ -1,0 +1,27 @@
+<form [formGroup]="animalForm" (submit)="animalSubmit(animalForm.value)">
+    <h2>Add Animals</h2>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Image</mat-label>
+        <input matInput formControlName="image">
+    </mat-form-field>
+    <mat-form-field>
+    <mat-label>Animal Type</mat-label>
+    <mat-select formControlName="type">
+        @for (type of animalTypes; track $index) {
+            <mat-option [value]="type.id">{{type.name}}</mat-option>
+        }
+    </mat-select>
+    </mat-form-field>
+    <div>
+        <button mat-button type="submit">Add animals</button>
+        <button mat-button (click)="closeDialog()">Cancel</button>
+    </div>
+</form>

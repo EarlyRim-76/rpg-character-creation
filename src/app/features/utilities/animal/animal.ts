@@ -243,4 +243,14 @@ class AnimalAbstract extends AAnimals{
 }
 //#endregion
 
+//#region Using TypeScript Record
+export const recordDictionary : Record<plantType, Plants> = {
+    [plantType.TYPE_ONE]: plant1,
+    [plantType.TYPE_TWO]: plant2,
+}
+const getKeyRecord = recordDictionary[plantType.TYPE_ONE] // to access the value
+//#endregion
+
+
+
 
